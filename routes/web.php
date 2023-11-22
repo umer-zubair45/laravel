@@ -23,6 +23,6 @@ Route::get("/abc", function(){
 });
 
 Route::resource('items', ItemController::class);
-Route::get('sales_entries/create', [SalesEntryController::class, 'create'])->name('sales_entries.create');
-Route::post('sales_entries.store', [SalesEntryController::class, 'store'])->name('sales_entries.store');
+Route::get('sales-entries/create', [SalesEntryController::class, 'create'])->name('sales_entries.create');
+Route::post('sales-entries', [SalesEntryController::class, 'store'])->name('sales_entries.store');
 Route::get('/calculate-total', [SalesEntryController::class, 'calculateTotal']);
